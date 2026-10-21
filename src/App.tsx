@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
+import { Analytics } from "@vercel/analytics/react";
 import { LangProvider, useLang } from "./i18n";
 import { scrollState } from "./lib/scroll";
 import Cursor from "./components/Cursor";
@@ -146,6 +147,7 @@ export default function App() {
   return (
     <LangProvider>
       <Site />
+      <Analytics />
     </LangProvider>
   );
 }
